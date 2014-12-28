@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.panel-body {
+
+}
+
+.panel-default>.panel-heading {
+    background-image: -webkit-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%);
+    background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
+}
+
+.btn-default {
+    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #dbdbdb;
+    text-shadow: 0 1px 0 #fff;
+    border-color: #ccc;
+}
+.nav-top {
+    background-color: #428bca;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-top a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#main-body {
+    box-shadow: 0px 0px 3px #eee;
+    min-height: 600px;
+    background-color: #ffffff;
+}
+
+#sidebar {
+    padding-left: 15px;
+    min-height: 600px;
+}
+
+.sidebar-body {
+    background-color: rgba(238, 238, 238, 0.28);
+    box-shadow: 2px 2px 3px #eee;
+    min-height: 400px;
+}
+
+.article-author {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+}
+
+.article-content {
+    padding: 10px;
+}
+
+
+
+.navbar {
+    margin-bottom: 0px;
+}

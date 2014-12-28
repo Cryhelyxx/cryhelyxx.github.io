@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../bower_components/Buttons/css/buttons.min.css" rel="stylesheet" />
+    <link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/editor.css" rel="stylesheet" />
+    <title></title>
+
+</head>
+<body ng-app>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#"></a>-->
+            </div>
+            <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-item"><a href="index.html"><i class="glyphicon glyphicon-home"></i> 首 页</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="navbar-item"><a href="#"><i class="glyphicon glyphicon-info-sign"></i> API文档</a></li>
+                    <li class="navbar-item"><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i> 策略市场</a></li>
+                    <li class="navbar-item"><a href="#"><i class="glyphicon glyphicon-question-sign"></i> 交流社区</a></li>
+                    <li class="navbar-item"><a href="signup.html"><i class="glyphicon glyphicon-user"></i> 注 册</a></li>
+                    <li class="navbar-item"><a href="signin.html"><i class="glyphicon glyphicon-log-in"></i> 登 录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a class="label label-warning">编辑窗口</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="label control-label">文章标题：</label>
+                                <input type="text" class="form-control" placeholder="文章标题">
+                            </div>
+                            <div class="form-group">
+                                <label class="label control-label">文章类别：</label>
+                                <select class="form-control" style="width: 360px;">
+                                    <option selected>资 讯</option>
+                                    <option>娱 乐</option>
+                                    <option>科 技</option>
+                                    <option>UTO</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" style="resize: vertical; width: 100%;height: 360px;" placeholder="写点什么吧..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="button button-glow button-primary-flat">提 交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--<button class="button button-3d button-action-flat button-dropdown-caution">asdf</button>-->
+    </div>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.13/angular.min.js"></script>
+</body>
+</html>
