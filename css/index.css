@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.nav-top {
+    background-color: #428bca;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-top a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.promo-content h3 {
+    font-size: 32px;
+    line-height: 70px;
+    font-weight: normal;
+}
+
+.promo-content h1, .promo-content h2, .promo-content h3 {
+    font-family: 'PT Sans Narrow', Arial, 微软雅黑, 黑体;
+    line-height: 60px;
+    margin-bottom: 0;
+    /* text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.promo-content h1 {
+    font-size: 96px;
+    line-height: 96px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0 0 10px;
+}

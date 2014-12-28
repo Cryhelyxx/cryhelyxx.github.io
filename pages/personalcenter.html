@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../bower_components/Buttons/css/buttons.min.css" rel="stylesheet" />
+    <link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/personalcenter.css" rel="stylesheet" />
+    <title></title>
+
+</head>
+<body ng-app>
+    <!--<div class="nav-top row" style="margin: 0;">
+        <div class="col-md-10 col-md-offset-1">
+            <a href="updatepassword.html">
+                <i class="glyphicon glyphicon-user"></i>&nbsp;
+                <b class="ng-binding">Cryhelyxx@BotVS</b>
+            </a>
+            <div class="pull-right">
+                <a href="#">
+                    <i class="glyphicon glyphicon-info-sign"></i> API文档
+                </a>
+                <a href="#">
+                    <i class="glyphicon glyphicon-shopping-cart"></i> 策略广场
+                </a>
+                <a href="#">
+                    <i class="glyphicon glyphicon-question-sign"></i> 交流社区
+                </a>
+                <span class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i>&nbsp;账户安全<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="updatepassword.html">修改密码</a></li>
+                    </ul>
+                </span>
+                <a href="signin.html">
+                    <i class="glyphicon glyphicon-log-out"></i> 退 出
+                </a>
+            </div>
+        </div>
+    </div>-->
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#"></a>-->
+            </div>
+            <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-item">
+                        <a href="updatepassword.html">
+                            <i class="glyphicon glyphicon-user"></i>&nbsp;
+                            <b class="ng-binding">Cryhelyxx@BotVS</b>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="navbar-item"><a href="#"><i class="glyphicon glyphicon-info-sign"></i> API文档</a></li>
+                    <li class="navbar-item"><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i> 策略市场</a></li>
+                    <li class="navbar-item"><a href="#"><i class="glyphicon glyphicon-question-sign"></i> 交流社区</a></li>
+                    <li class="navbar-item dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i>&nbsp;账户安全<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">个人资料</a></li>
+                            <li class="divider"></li>
+                            <li><a href="updatepassword.html">修改密码</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item"><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i>&nbsp;退 出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="container">
+        <div class="row">
+            <div id="section-reboots"class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">机器人</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#" class="label label-success">
+                        <i class="glyphicon glyphicon-plus"></i>&nbsp;
+                        创建机器人
+                    </a>
+                </div>
+            </div>
+            <div id="section-strategies"class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">策 略</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#" class="label label-success">
+                        <i class="glyphicon glyphicon-plus"></i>&nbsp;
+                        编写新策略
+                    </a>&nbsp;
+                    <a href="#" class="label label-danger">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;
+                        去策略广场看看
+                    </a>
+                </div>
+            </div>
+            <div id="section-platforms"class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">交易所</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#" class="label label-success">
+                        <i class="glyphicon glyphicon-plus"></i>&nbsp;
+                        添加交易所
+                    </a>
+                </div>
+            </div>
+            <div id="section-nodes"class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">托管者</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#" class="label label-success">
+                        <i class="glyphicon glyphicon-plus"></i>&nbsp;
+                        添加托管者
+                    </a>
+                </div>
+            </div>
+            <div id="section-market"class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">实时行情</h3>
+                </div>
+                <div class="panel-body">
+                    当前美元对人民币汇率:
+                    <span class="badge ng-binding">6.2284</span>
+                    <span class="pull-right badge ng-binding ng-scope">14</span>
+                </div>
+                <table class="table table-condensed table-hover">
+                    <thead>
+                    <tr>
+                        <th class="col-md-2">
+                            平台&nbsp;
+                            <a href="#">
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </a>
+                        </th>
+                        <th class="col-md-2">
+                            最近成交&nbsp;
+                            <a href="#">
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </a>
+                        </th>
+                        <th class="col-md-1">
+                            买一&nbsp;
+                            <a href="#">
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </a>
+                        </th>
+                        <th class="col-md-1">
+                            卖一&nbsp;
+                            <a href="#">
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </a>
+                        </th>
+                        <th class="col-md-1">
+                            最高&nbsp;
+                            <a href="#">
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </a>
+                        </th>
+                        <th class="col-md-1">
+                            最低&nbsp;
+                            <a href="#">
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </a>
+                        </th>
+                        <th class="col-md-2">
+                            成效量
+                        </th>
+                        <th class="col-md-2">
+                            更新时间
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                        <tr class="ng-scope">
+                            <td class="ng-binding">
+                                火币&nbsp;&nbsp;
+                                <a href="#" target="_blank">
+                                    <img border="0" class="pull-right" src="../images/huobi.png">
+                                </a>
+                            </td>
+                            <td class="ng-binding">
+                                1964.65
+                                <span class="pull-right">↓</span>
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                1964.25
+                            </td>
+                            <td class="ng-binding">
+                                37525.25
+                            </td>
+                            <td class="ng-binding">
+                                2014-12-28 15:15:24
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--<button class="button button-3d button-action-flat button-dropdown-caution">asdf</button>-->
+    </div>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.13/angular.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#username").mouseover(function()	{
+                $(this).popover('show');
+            });
+
+            $("#username").mouseout(function()	{
+                $(this).popover('hide');
+            });
+
+            $("#password").mouseover(function()	{
+                $(this).popover('show');
+            });
+
+            $("#password").mouseout(function()	{
+                $(this).popover('hide');
+            });
+        })
+
+    </script>
+</body>
+</html>
